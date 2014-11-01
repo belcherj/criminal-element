@@ -44,7 +44,7 @@
           for( var i = 0; i < rawData.length; i++ ) {
 
               this.crimes.push( rawData[i] );
-              myDataRef.push({title: this.crimes[i].attributes.TEXT_GENERAL_CODE, lat: this.crimes[i].geometry.y, lon: this.crimes[i].geometry.x});
+              myDataRef.push({id: this.crimes[1].DC_KEY, title: this.crimes[i].attributes.TEXT_GENERAL_CODE, lat: this.crimes[i].geometry.y, lon: this.crimes[i].geometry.x});
 
           }
           this.mapReady = true;
