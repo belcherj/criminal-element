@@ -1,0 +1,47 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/firebase-element/firebase-element.html">
+<link rel="import" href="bower_components/google-map/google-map.html">
+
+<polymer-element name="criminal-element" attributes="">
+  <template>
+
+    <link rel="stylesheet" href="criminal-element.css">
+    <firebase-element id="base" location="https://torid-torch-5520.firebaseio.com/" data="{{data}}" keys="{{keys}}"></firebase-element>
+
+    <template if="{{mapReady}}">
+
+      <google-map id="map" latitude="39.9522" longitude="-75.1639" fit>
+        <template repeat="{{ key in keys }}">
+          <google-map-marker
+            latitude="{{data[key].lat}}"
+            longitude="{{data[key].lon}}"
+            title="">
+            {{data[key].title}}
+          </google-map-marker>
+        </template>
+      </google-map>
+    </template>
+
+
+  </template>
+  <script>
+    (function () {
+      'use strict';
+      Polymer({
+        crimes: [],
+        mapReady: false,
+
+        keysChanged: function() {
+            console.log( data );
+        },
+
+        ready: function() {
+          this.mapReady = true;
+        }
+
+
+      });
+
+    })();
+  </script>
+</polymer-element>

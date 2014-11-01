@@ -7,21 +7,21 @@
     <script src="../bower_components/web-component-tester/browser.js"></script>
     <script src="../bower_components/platform/platform.js"></script>
 
-    <link rel="import" href="../crime-philly.html">
+    <link rel="import" href="../criminal-element.html">
 
   </head>
 
     <body unresolved>
 
-      <crime-philly></crime-philly>
+      <criminal-element></criminal-element>
 
       <script>
-        suite('<crime-philly-story>', function() {
+        suite('<criminal-element-story>', function() {
 
           suite( 'with no attributes', function(){
 
             setup(function() {
-              el = document.querySelector('crime-philly-story').cloneNode();
+              el = document.querySelector('criminal-element-story').cloneNode();
             });
 
             test( 'todo', function( done ) {
