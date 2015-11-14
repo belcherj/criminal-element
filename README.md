@@ -1,4 +1,4 @@
-####Septa Current Location Map
-Displays current location of Septa Busses and Trolleys.
+####Philadelphia Crime Location Map
+Displays latest crimes in the Philadelphia city crime index.
 
 @belcherj
